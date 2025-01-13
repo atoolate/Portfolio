@@ -31,6 +31,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 4em;
     padding: 0.5em 1em;
     border-radius: 50px;
     background-color: var(--sticky-header-bg);
@@ -40,7 +41,7 @@ body {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 50vw;
+    width: auto;
     border: 1px solid #6b6b6d2a;
     max-width: 1280px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
@@ -53,8 +54,8 @@ body {
 }
 
 .profile-pic {
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     border: 2px solid var(--bg-color);
     background-image: url("/assets/alexAvatar.png");
@@ -66,19 +67,31 @@ body {
 
 .profile-pic-status {
     position: absolute;
-    bottom: 15px;
-    left: 75px;
+    bottom: 10px;
+    left: 55px;
     background-color: rgb(51, 151, 51);
     border-radius: 50%;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
 }
 
 .profile-name, .location {
     font-family: var(--font-body);
+    color: var(--bg-color);
     font-weight: 100;
+    font-size: 1em;
+}
+
+.location {
+    font-size: 0.8em;
     font-style: italic;
-    font-size: 1.3em;
+    color: var(--box-color-grey);
 }
 
 .cta {
@@ -93,6 +106,7 @@ body {
     align-items: center;
     transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Add color transition */
     letter-spacing: 0.5px;
+    gap: 0.5em;
 }
 
 .cta:hover {
@@ -103,6 +117,17 @@ body {
 
 .cta:hover i {
     color: var(--bg-color);
+}
+
+#cta-header {
+    background-color: var(--bg-color);
+    border-color: var(--box-color-grey);
+    font-size: 1em;
+}
+
+#cta-header:hover {
+    background-color: var(--box-color-grey);
+    border-color: var(--bg-color);
 }
 
 /* Hero */
