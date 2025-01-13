@@ -30,6 +30,10 @@ body {
     
 }
 
+a {
+    text-decoration: none;
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -172,6 +176,7 @@ body {
     font-family: var(--font-body);
     font-weight: 400;
     font-style: var(--font-body);
+
 }
 
 .hero-text {
@@ -268,10 +273,13 @@ body {
 .project-row {
     display: flex;
     margin: 0 auto;
+    justify-content: space-between;
+    align-items: flex-end;
     width: 100%;
     color: var(--text-color);
+    position: relative; /* Ensure the glow effect is positioned correctly */
+    opacity: 0.5;
     transition: opacity 0.4s ease-in-out;
-    opacity: 0.6;
 }
 
 .project-row:hover {
@@ -280,6 +288,19 @@ body {
 
 .project-content {
     display: flex;
+    width: fit-content;
+    gap: 2rem;
+    padding: 1rem 0;
+    
+}
+
+.long-arrow {
+    font-size: 4em;
+}
+
+.project-content {
+    display: flex;
+    width: fit-content;
     gap: 2rem;
     padding: 1rem 0;
 }
