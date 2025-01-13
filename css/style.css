@@ -286,6 +286,15 @@ a {
     opacity: 1;
 }
 
+.project-row:hover .long-arrow {
+    transition: transform 0.4s ease-in-out;
+    transform: translateX(-20px);
+}
+
+.project-row .long-arrow {
+    transition: transform 0.4s ease-in-out;
+}
+
 .project-content {
     display: flex;
     width: fit-content;
