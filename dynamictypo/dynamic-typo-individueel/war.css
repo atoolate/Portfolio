@@ -1,0 +1,29 @@
+
+body {
+    background-color: #141414;
+}
+.sprite {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 127px;
+    height: 70px;
+    scale: 1;
+    background-image: url(sprite_war/WARWAR.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    animation-delay: 1s;
+    animation: war 4s steps(14) forwards;
+}
+
+
+@keyframes war {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0px -980px;
+    }
+}

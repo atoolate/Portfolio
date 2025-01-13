@@ -1,0 +1,666 @@
+:root {
+    --font-body: "Jozefin Sans", sans-serif;
+    --font-header: "RNDI Anasera", sans-serif;
+    --bg-color:  #1e1e1f;
+    --text-color: rgb(232, 231, 225);
+    --accent-color-purple: #A288E3;
+    --box-color-grey: #f0f7f48b;
+    --sticky-header-bg: #f0f7f48b;
+}
+
+* {
+    color: var(--text-color);
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "RNDI Anasera";
+    src: url(/fonts/rndi.ttf);
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  
+    /* background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='rgba(233, 232, 226, 1.00)'/><path d='M11 6a5 5 0 01-5 5 5 5 0 01-5-5 5 5 0 015-5 5 5 0 015 5'  stroke-width='1' stroke='none' fill='%2380808079'/></pattern></defs><rect width='800%' opacity='10%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>"); */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    background-color: var(--sticky-header-bg);
+    backdrop-filter: blur(0);
+    z-index: 3;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50vw;
+    border: 1px solid #6b6b6d2a;
+    max-width: 1280px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.profile-pic {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 2px solid var(--bg-color);
+    background-image: url("/assets/alexAvatar.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+
+.profile-pic-status {
+    position: absolute;
+    bottom: 15px;
+    left: 75px;
+    background-color: rgb(51, 151, 51);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+.profile-name, .location {
+    font-family: var(--font-body);
+    font-weight: 100;
+    font-style: italic;
+    font-size: 1.3em;
+}
+
+.cta {
+    padding: 0.5em 1em;
+    border: solid 2px var(--bg-color); /* Ensure the initial border color is set */
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1.3em;
+    background-color: transparent;
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Add color transition */
+    letter-spacing: 0.5px;
+}
+
+.cta:hover {
+    border-color: transparent;
+    background-color: var(--accent-color-purple);
+    color: var(--bg-color);
+}
+
+.cta:hover i {
+    color: var(--bg-color);
+}
+
+/* Hero */
+.hero-wrapper {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 90vh;
+    padding-top: 100px; /* Ensure the hero content is underneath the header */
+    margin-bottom: 2em;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    flex-grow: 1;
+    width: 80vw;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    font-size: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    height: 100%;
+}
+
+#hero-greeting {
+    font-size: 0.3em;
+    border: 2px solid;
+    border-color: var(--accent-color-purple);
+    width: fit-content;
+    padding: 0.2em 0.5em;
+    border-radius: 12px;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-style: var(--font-body);
+}
+
+.hero-text {
+    font-family: var(--font-body);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+.hero-text h2 {
+    font-family: var(--font-header);
+}
+
+#typed-container {
+    height: 1.4em;
+    display: flex;
+    text-align: center;
+}
+
+#typed {
+    display: inline-block;
+    color: var(--accent-color-purple);
+    font-family: var(--font-header);
+    white-space: nowrap;
+    height: max-content;
+}
+
+.skills {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 80vw;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skills-list i {
+    font-size: 3em; /* Adjust the size of the icons */
+    color: var(--box-color-grey); /* Start with grey color */
+    opacity: 0.3; /* Start with lower opacity */
+    transition: opacity 0.5s ease-in-out, color 0.5s ease-in-out; /* Add transition for smooth animation */
+}
+
+.skills-list i.visible {
+    opacity: 1; /* Show icons when they become visible */
+    color: var(--text-color); /* Change color when visible */
+}
+
+.skills-list p {
+    margin-top: 0.5em;
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+/* Projects */
+
+.content-wrapper {
+    width: 80vw;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.projects {
+    width: 100%;
+}
+
+#projects-section-subtitle {
+    text-align: right;
+    transform: rotate(3deg);
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2em;
+}
+
+.project-row {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    color: var(--text-color);
+    transition: opacity 0.4s ease-in-out;
+    opacity: 0.6;
+}
+
+.project-row:hover {
+    opacity: 1;
+}
+
+.project-content {
+    display: flex;
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.project-number {
+    font-family: var(--font-body);
+    line-height: 4rem;
+    font-size: 1.25rem;
+    color: var(--accent-color-purple);
+}
+
+.project-title {
+    font-family: var(--font-header);
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 118px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    
+}
+
+@media (min-width: 1024px) {
+    
+}
+
+/* about */
+.about {
+    padding-top: 150px;
+    width: 100%;
+}
+
+.section-subtitle {
+    font-family: var(--font-header);
+    font-size: 4em;
+    font-weight: 900;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    text-transform: uppercase;
+    transform: rotate(-3deg);
+}
+
+/* Adjust the divider if needed */
+.subtitle-divider {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 3em;
+    gap: 2em; /* Reduced gap to align better */
+}
+
+.divider {
+    width: 75%;
+    border: 1px solid #6b6b6d58;
+}
+
+.aboutme-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.about-me {
+    height: fit-content;
+    text-align: left; /* Center the text inside the blob */
+    line-height: 1.6; /* Adjust line-height for better readability */
+    max-width: 600px; /* Optional: limit the max width to prevent overflow */
+    margin: 0 auto; /* Center the blob on the page */
+}
+
+.about-me h4 {
+    font-weight: bold;
+    
+}
+
+
+/* Swiper */
+.about-swiper {
+    min-width: 100px;
+    max-width: auto;
+    height: fit-content;
+    background-color: #fff;
+    border-radius: 24px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative; /* Ensure buttons are positioned relative to this */
+}
+
+.swiper-container {
+    width: 100%;
+    height: 600px;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Swiper navigation buttons */
+.swiper-button-next, 
+.swiper-button-prev {
+    color: var(--sticky-header-bg) !important;
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.swiper-button-prev {
+    left: -40px; /* Position left of the swiper */
+}
+
+.swiper-button-next {
+    right: -40px; /* Position right of the swiper */
+}
+
+/* Swiper pagination */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--box-color-grey) !important; /* Normal bullet color */
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--accent-color-purple) !important; /* Active bullet color */
+}
+
+
+/* contact */
+/* Contact Section */
+.contact {
+    margin-top: 150px;
+    display: flex;
+    padding-bottom: 6em;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 700px;
+    width: 100%;
+}
+
+.contact-title-wrapper {
+    margin-bottom: 1.5em;
+    position: relative;
+}
+
+.contact-title {
+    font-family: var(--font-header);
+    font-size: 6em;
+    font-weight: 900;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    text-transform: uppercase;
+    transform: rotate(-3deg);
+}
+
+.contact-info {
+    font-family: var(--font-body);
+    font-size: 1.6em;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 0.5em;
+}
+
+.contact-email {
+    font-family: var(--font-header);
+    font-size: 3.2em;
+    font-weight: 800;
+    color: var(--accent-color-purple);
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 0.4em 0.8em;
+    border-radius: 24px;
+}
+
+.contact-email:hover {
+    transform: scale(1.05);
+}
+
+/* Divider between Email and CTA */
+.contact-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #6b6b6d58;
+    margin: 2em 0;
+}
+
+.cta-container {
+    align-self: flex-start;
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+
+.cta-container p {
+    font-family: var(--font-body);
+    font-size: 1.5em;
+}
+
+/* Reusing CTA class from header */
+.cta {
+    padding: 0.5em 1em;
+    border: solid 2px var(--accent-color-purple); /* Ensure the initial border color is set */
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1.3em;
+    background-color: transparent;
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Add color transition */
+    letter-spacing: 0.5px;
+}
+
+.cta:hover {
+    border-color: transparent;
+    background-color: var(--accent-color-purple);
+    color: var(--bg-color);
+}
+
+.cta:hover i {
+    color: var(--bg-color);
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+    /* About section: make the swiper wrap underneath the text */
+    .aboutme-content {
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+
+    .about-me {
+        max-width: 100%;
+    }
+
+    .about-swiper {
+        margin-top: 2em;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Header: hide name and location */
+    .profile-name, 
+    .location {
+        display: none;
+    }
+
+    /* Projects grid: make it wrap into two columns */
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5em;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    /* General body padding */
+    body {
+        padding: 1em;
+    }
+
+    .profile-pic {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .profile-pic-status {
+        width: 16%; /* Adjust size for tablet */
+        height: 16%;
+        bottom: 4px;
+        right: 4px;
+    }
+
+    /* CTA button size adjustment */
+    .cta {
+        font-size: 1.1em;
+        padding: 0.4em 0.8em;
+    }
+
+    /* Hero content font-size reduced */
+    .hero-content {
+        font-size: 2.5em;
+    }
+
+    /* Contact title font-size reduced */
+    .contact-title {
+        font-size: 3.5em;
+    }
+
+    /* Projects grid: stack projects vertically */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    /* Swiper responsiveness */
+    .about-swiper {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Email font-size adjustment */
+    .contact-email {
+        font-size: 2.2em;
+    }
+
+    /* Section titles adjustment */
+    .section-subtitle {
+        font-size: 3em;
+    }
+
+    /* Projects grid title font-size */
+    .subtitle {
+        font-size: 1.8em;
+    }
+
+    /* Contact info font-size adjustment */
+    .contact-info {
+        font-size: 1.3em;
+        line-height: 1.6;
+    }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+
+    .profile-pic {
+        width: 4rem; /* Reduce profile picture size */
+        height: 4rem; /* Reduce profile picture size */
+    }
+
+    .profile-pic-status {
+        width: 18%;  /* Adjust size based on profile pic */
+        height: 18%;
+        bottom: 2px;
+        right: 2px; /* Adjust for mobile scaling */
+    }
+
+    /* Further reduce hero content font-size */
+    .hero-content {
+        font-size: 2em;
+    }
+
+    #typed {
+        padding-top: 1.5em;
+        font-size: 1.2em; /* Reduce the size of the typed text */
+        white-space: normal; /* Allow typed text to wrap */
+        overflow-wrap: break-word; /* Break long words to fit within the viewport */
+    }
+
+    /* Smaller contact title */
+    .contact-title {
+        font-size: 3em;
+    }
+
+    /* Section subtitle smaller */
+    .section-subtitle {
+        font-size: 2.8em;
+    }
+
+    /* Smaller project descriptions */
+    .project-description {
+        font-size: 0.85em;
+    }
+
+    /* Reduce email font size further */
+    .contact-email {
+        font-size: 1.4em;
+    }
+
+    /* Reduce project grid title size further */
+    .subtitle {
+        font-size: 1.6em;
+    }
+
+    /* Reduce contact info font-size */
+    .contact-info {
+        font-size: 1.2em;
+    }
+}
+
