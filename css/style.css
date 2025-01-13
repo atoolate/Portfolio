@@ -20,7 +20,7 @@
 
 @font-face {
     font-family: "RNDI Anasera";
-    src: url(/fonts/rndi.ttf);
+    src: url(/fonts/rndi.ttf) format("truetype");
 }
 
 body {
