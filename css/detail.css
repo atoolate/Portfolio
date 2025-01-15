@@ -236,6 +236,16 @@ body p {
     text-align: center;
     max-width: fit-content;
     align-self: center;
+    font-size: 1.4em;
+    padding: 0.5em 1em;
+    background-color: var(--box-color-grey);
+    border-radius: 24px;
+
+}
+
+#top-button:hover {
+    border: 1px solid var(--accent-color-purple);
+    transform: scale(1.05);
 }
 
 
@@ -285,46 +295,6 @@ body p {
     display: flex;
     flex-direction: column;
     gap: 2em;
-}
-
-/* ZENGARDEN */
-#csszengarden-detail {
-    font-size: 4.5em;
-}
-
-.project-full-image {
-    padding-bottom: 5em;
-}
-
-.project-full-image img{
-    width: 100%;
-    border-radius: 24px;
-}
-
-/* dynamic poster */
-#dynamicPoster-title {
-    font-size: 4em;
-}
-
-
-/* uselessweb */
-#uselessLink {
-    text-decoration: underline;
-    font-weight: 600;
-
-}
-
-.project-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2em;
-    padding-bottom: 5em;
-}
-
-/* dynamictypo */
-#dynamictypo-title {
-    font-size: 3em;
 }
 
 @media (max-width: 800px) {
