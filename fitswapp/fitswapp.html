@@ -30,15 +30,26 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9GCPBF8"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-     
+
     <nav class="back">
         <a href="/index.html">
         <i class="fa-solid fa-chevron-left back-button"></i>
         </a>
     </nav>
 
+    <!-- Header -->
+    <header class="header">
+        <!-- navigation to steps in design process -->
+         <a class="button" href="#overview">Overview</a>
+         <a class="button" href="#empathize">Empathize</a>
+         <a class="button" href="#define">Define</a>
+         <a class="button" href="#ideate">Ideate</a>
+         <a class="button" href="#prototype">Prototype</a>
+         <a class="button" href="#test">Test</a>
+    </header>
+
     <main class="detail-wrapper">
-        <section class="overview">
+        <section class="overview" id="overview">
             <!-- korte summary van project -->
             <div class="overview-text">
                 <div class="overview-text-content">
@@ -121,7 +132,7 @@
 
         <!-- process -->
         <section class="process">
-            <div class="empathize">
+            <div class="empathize" id="empathize">
                 <div class="empathize-content">
                     <div class="empathize-start">
                         <h3 class="subtitle">1. Empathize</h3>
@@ -180,7 +191,7 @@
                 </div>
             </div>
 
-            <div class="define">
+            <div class="define" id="define">
                 <h3 class="subtitle">2. Define</h3>
 
                 <div class="define-content">
@@ -231,7 +242,7 @@
                 </div>
             </div>
 
-            <div class="ideate">
+            <div class="ideate" id="ideate">
                 <h3 class="subtitle">3. Ideate</h3>
 
                 <div class="ideate-content">
@@ -266,7 +277,7 @@
                 </div>
             </div>
 
-            <div class="prototype">
+            <div class="prototype" id="prototype">
                 <h3 class="subtitle">4. Prototype</h3>
 
                 <div class="prototype-content">
@@ -297,7 +308,7 @@
             </div>
             
         
-            <div class="test">
+            <div class="test" id="test">
                 <h3 class="subtitle">5. Test</h3>
                 <div class="test-content">
                     <div>
@@ -325,5 +336,8 @@
         </section>
         
     </main>
+
+    <script src="../sticky.js"></script>
+
 </body>
 </html>
