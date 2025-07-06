@@ -1,6 +1,6 @@
 :root {
     --font-body: "Jozefin Sans", sans-serif;
-    --font-header: "RNDI Anasera", sans-serif;
+    --font-header: "Passion One", sans-serif;
     --bg-color:  #1e1e1f;
     --text-color: rgb(232, 231, 225);
     --accent-color-purple: #A288E3;
@@ -188,6 +188,7 @@ a {
 
 .hero-text h2 {
     font-family: var(--font-header);
+    font-weight: 100;
 }
 
 #typed-container {
@@ -512,7 +513,7 @@ a {
 .contact-email {
     font-family: var(--font-header);
     font-size: 3.2em;
-    font-weight: 800;
+    font-weight: 400;
     color: var(--accent-color-purple);
     text-decoration: none;
     display: inline-block;
